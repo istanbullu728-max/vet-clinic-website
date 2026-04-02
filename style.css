@@ -318,7 +318,7 @@ section { padding: 6rem 0; }
 .testimonials-section {
     background-color: var(--primary-light);
     overflow: hidden; /* Prevent horizontal scrollbar on body */
-    padding: 6rem 0;
+    padding: 3.5rem 0;
 }
 .testimonials-ticker {
     --gap: 2rem;
@@ -328,6 +328,7 @@ section { padding: 6rem 0; }
     gap: var(--gap);
     /* Soft fade mask on the edges */
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
 .testimonials-track {
     flex-shrink: 0;
@@ -338,19 +339,16 @@ section { padding: 6rem 0; }
     min-width: 100%;
     animation: marquee 35s linear infinite;
 }
-.testimonials-track:hover {
-    /* Pause on hover if you want: animation-play-state: paused; */
-}
 .testimonial-card {
-    width: 350px;
+    width: 300px;
     background-color: var(--surface);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-soft);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.2rem;
+    gap: 1rem;
     flex-shrink: 0;
     border: 1px solid rgba(15, 61, 62, 0.05); /* Slight border for more definition */
 }
@@ -377,7 +375,7 @@ section { padding: 6rem 0; }
 }
 
 @media (max-width: 768px) {
-    .testimonial-card { width: 320px; padding: 1.8rem; }
+    .testimonial-card { width: 280px; padding: 1.2rem; }
 }
 
 /* --- MAP SECTION --- */
