@@ -583,35 +583,46 @@ section { padding: 6rem 0; }
     .nav-links { gap: 1rem; }
 }
 @media (max-width: 768px) {
+    :root { --container-padding: 1.25rem; }
+    body { font-size: 15px; }
+
     .nav-links, .navbar .btn-primary { display: none; }
     .menu-toggle { display: block; }
+    .navbar { padding: 1rem 0; }
+    
     .hero-bg { background-position: center; }
     .hero-overlay { background: linear-gradient(180deg, rgba(250,250,250,0.6) 0%, rgba(250,250,250,1) 80%); }
-    .hero-content-left { text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .hero-display-title { font-size: 2.5rem; line-height: 1.15; margin-bottom: 1rem; }
-    .hero-main-desc { font-size: 1.05rem; }
-    .hero-action-buttons { flex-direction: column; width: 100%; gap: 1rem; margin-top: 1rem; }
-    .btn-pill-primary, .btn-pill-white { width: 100%; justify-content: center; padding: 1.2rem; }
+    .hero-content-left { text-align: center; display: flex; flex-direction: column; align-items: center; padding-top: 1rem; }
+    .hero-display-title { font-size: 2.25rem; line-height: 1.15; margin-bottom: 0.8rem; }
+    .hero-display-title br { display: none; } /* Removes ugly forced breaks on mobile */
+    .hero-main-desc { font-size: 1rem; line-height: 1.5; margin-bottom: 2rem; padding: 0 1rem; }
+    .hero-action-buttons { flex-direction: column; width: 100%; gap: 1rem; }
+    .btn-pill-primary, .btn-pill-white { width: 100%; justify-content: center; padding: 1.1rem; border-radius: 50px; }
     
-    .hero-visual-right { height: 320px; align-items: flex-end; justify-content: center; margin-top: 2rem; }
-    .arch-image-container { width: 250px; height: 100%; border-radius: 200px 200px 0 0; }
+    .hero-visual-right { height: 280px; align-items: flex-end; justify-content: center; margin-top: 2rem; }
+    .arch-image-container { width: 220px; height: 100%; border-radius: 200px 200px 0 0; }
     
     .footer-container { gap: 2.5rem; grid-template-columns: 1fr; margin-bottom: 2rem; text-align: center; }
-    .social-links { justify-content: center; margin-top: 1rem; }
+    .social-links { justify-content: center; margin-top: 0.5rem; }
     .footer { padding-top: 3.5rem; border-radius: 30px 30px 0 0; }
-    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; padding: 1.5rem; }
     
-    .contact-form-wrapper { padding: 1.8rem; border-radius: 20px; }
-    .page-header { padding: 6rem 0 2.5rem; }
-    .section-title { font-size: 2rem; margin-bottom: 0.8rem; line-height: 1.2; }
-    .section-header { margin-bottom: 2.5rem; text-align: center; }
-    .section-header p { font-size: 0.95rem; }
+    .contact-form-wrapper { padding: 1.5rem; border-radius: 20px; }
+    .page-header { padding: 5rem 0 2rem; }
+    .section-title { font-size: 1.9rem; margin-bottom: 0.8rem; line-height: 1.2; }
+    .section-header { margin-bottom: 2rem; text-align: center; }
+    .section-header p { font-size: 0.95rem; line-height: 1.5; padding: 0 1rem; }
     .map-container { min-height: 250px !important; height: 250px !important; border-radius: 20px; }
     
-    /* Adapt floating actions on mobile */
-    .floating-actions { right: 1rem; bottom: 1rem; gap: 0.6rem; }
-    .action-btn { width: 50px; height: 50px; font-size: 1.5rem; }
-    .action-btn::after { display: none; } /* Hide tooltip to avoid touch issue */
+    /* App-like floating dock - CRITICAL UX FIX */
+    .floating-actions { 
+        right: 50%; bottom: 1.5rem; transform: translateX(50%);
+        flex-direction: row; gap: 0.8rem;
+        background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
+        padding: 0.6rem 1rem; border-radius: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+    .action-btn { width: 45px; height: 45px; font-size: 1.3rem; box-shadow: none; }
+    .action-btn::after { display: none; }
 }
 
 /* --- QUICK APPOINTMENT SECTION --- */
@@ -744,15 +755,16 @@ section { padding: 6rem 0; }
 }
 @media (max-width: 900px) {
     .appointment-grid { grid-template-columns: 1fr; border-radius: 20px; overflow: hidden; }
-    .appointment-right { display: none; } /* Hide image completely on mobile to prevent excessive page height */
-    .quick-appointment { padding: 0 1rem; margin: 2rem 0; }
+    .appointment-right { display: none; } 
+    .quick-appointment { padding: 0 1rem; margin: 1.5rem 0; }
 }
 @media (max-width: 576px) {
-    .appointment-left { padding: 2.5rem 1.5rem; border-radius: 20px; }
-    .appointment-form { grid-template-columns: 1fr; gap: 1rem; row-gap: 1.2rem; }
-    .appointment-title { font-size: 2rem; line-height: 1.2; margin-bottom: 1.5rem; }
-    .form-group input { padding: 1.1rem 1.2rem; border-radius: 12px; }
-    .btn-appointment-submit { width: 100%; padding: 1.1rem 2rem; border-radius: 12px; }
+    .appointment-left { padding: 2.5rem 1.5rem; border-radius: 20px; text-align: center; }
+    .appointment-form { grid-template-columns: 1fr; gap: 1rem; row-gap: 1.2rem; text-align: left; }
+    .appointment-title { font-size: 1.9rem; line-height: 1.2; margin-bottom: 1.5rem; padding: 0 1rem; }
+    .appointment-subtitle { margin: 0 auto 0.5rem; display: inline-block; }
+    .form-group input { padding: 1.1rem 1.2rem; border-radius: 50px; border: 1px solid rgba(0,0,0,0.05); }
+    .btn-appointment-submit { width: 100%; padding: 1.2rem 2rem; border-radius: 50px; font-size: 1.1rem; }
 }
 
 /* --- SERVICES CAROUSEL --- */
@@ -812,7 +824,7 @@ section { padding: 6rem 0; }
 }
 @media (max-width: 576px) {
     .services-carousel-wrapper { padding: 0; } 
-    .services-track { padding: 1rem 1.5rem 2.5rem; gap: 1rem; }
+    .services-track { padding: 1rem 1.25rem 2.5rem; gap: 1rem; }
     .carousel-nav-btn { display: none; } 
-    .carousel-card { flex: 0 0 88%; border-radius: 20px; }
+    .carousel-card { flex: 0 0 85%; border-radius: 20px; }
 }
