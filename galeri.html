@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri | VetClinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-paw-print"></i>
+                VetClinic
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                <a href="galeri.html" class="active">Galeri</a>
+                <a href="hakkimizda.html">Hakkımızda</a>
+                <a href="blog.html">Blog</a>
+                <a href="iletisim.html">İletişim</a>
+            </nav>
+            <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            <button class="menu-toggle"><i class="ph ph-list"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu">
+        <button class="close-menu"><i class="ph ph-x"></i></button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="blog.html">Blog</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header fade-up">
+        <div class="container">
+            <h1>Kliniğimizden Kareler</h1>
+            <p>Minik dostlarımızın en sevgi dolu anları ve modern ekipmanlarımızla donatılmış çalışma alanlarımız.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery" style="padding-top: 0;">
+        <div class="container gallery-grid">
+            <div class="gallery-item fade-up grid-tall">
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=800&auto=format&fit=crop" alt="Mutlu Köpek">
+                <div class="gallery-overlay"><h3>Mutlu Misafirlerimiz</h3></div>
+            </div>
+            <div class="gallery-item fade-up grid-wide">
+                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop" alt="Klinik Ortamı">
+                <div class="gallery-overlay"><h3>Modern Muayene Odalarımız</h3></div>
+            </div>
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop" alt="Kedi">
+                <div class="gallery-overlay"><h3>Dinlenme Alanı</h3></div>
+            </div>
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?q=80&w=800&auto=format&fit=crop" alt="Laboratuvar">
+                <div class="gallery-overlay"><h3>Steril Ameliyathane</h3></div>
+            </div>
+            <div class="gallery-item fade-up grid-wide">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1200&auto=format&fit=crop" alt="Pet Bakım">
+                <div class="gallery-overlay"><h3>Özenli Bakım Hizmetleri</h3></div>
+            </div>
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" alt="Hekimimiz">
+                <div class="gallery-overlay"><h3>Uzman Hekimlerimiz</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="ph-fill ph-paw-print"></i> VetClinic</a>
+                <p>Minik dostlarınızın sağlığı, bizim önceliğimizdir.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Ulaşım</h4>
+                <ul>
+                    <li><i class="ph ph-map-pin"></i> Örnek Mah. Pati Sok No:12</li>
+                    <li><i class="ph ph-phone"></i> +90 555 123 45 67</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2024 VetClinic.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions fade-up">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/905551234567" target="_blank" class="action-btn action-wa" aria-label="WhatsApp'tan Yazın" rel="noopener noreferrer">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+905551234567" class="action-btn action-phone" aria-label="Bizi Arayın">
+            <i class="ph-fill ph-phone-call"></i>
+        </a>
+        <!-- Location -->
+        <a href="https://maps.google.com" target="_blank" class="action-btn action-loc" aria-label="Yol Tarifi Alın" rel="noopener noreferrer">
+            <i class="ph-fill ph-map-pin"></i>
+        </a>
+    </div>
+
+</body>
+</html>

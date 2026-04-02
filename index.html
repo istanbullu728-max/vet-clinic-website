@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetClinic | Modern Veteriner Kliniği</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-paw-print"></i>
+                VetClinic
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Anasayfa</a>
+                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                <a href="galeri.html">Galeri</a>
+                <a href="hakkimizda.html">Hakkımızda</a>
+                <a href="blog.html">Blog</a>
+                <a href="iletisim.html">İletişim</a>
+            </nav>
+            <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            <button class="menu-toggle"><i class="ph ph-list"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu">
+        <button class="close-menu"><i class="ph ph-x"></i></button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="blog.html">Blog</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section (Happy Pet Redesign) -->
+    <section class="hero modern-split-hero">
+        <div class="container hero-container-split">
+            <!-- Left Info -->
+            <div class="hero-left fade-up">
+                <h1 class="modern-title"><span class="text-orange">Happy Pet</span> <br>Veterinerlik</h1>
+                
+                <div class="hero-info-box">
+                    <div class="info-icon-wrapper">
+                        <i class="ph-bold ph-house-line"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>Köpek Bakımı</h4>
+                        <p>Evcil dostlarınızın özgürce ve sağlıklı bir yaşam sürebilmeleri için bütün bakımlarını üstlenmekteyiz!</p>
+                    </div>
+                </div>
+                
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <div class="btn-wrap">
+                    <a href="iletisim.html" class="btn-bone">Bize Ulaşın</a>
+                </div>
+            </div>
+            
+            <!-- Right Blob Image -->
+            <div class="hero-right fade-up stagger-1">
+                <div class="blob-mask">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop" alt="Mutlu Koşan Köpek" class="running-dog-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Neler Yapıyoruz?</h2>
+                <p>Can dostlarınız için A'dan Z'ye kapsamlı veteriner hizmetleri sunuyoruz.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card fade-up stagger-1">
+                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=800&auto=format&fit=crop" alt="Muayene" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon"><i class="ph-fill ph-stethoscope"></i></div>
+                        <h3>Genel Muayene</h3>
+                        <p>Detaylı sağlık taraması ve rutin muayenelerle dostlarınızın sağlığını güvence altına alıyoruz.</p>
+                        <a href="hizmetlerimiz.html" class="service-link">Daha Fazla Bilgi <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card fade-up stagger-2">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop" alt="Aşı" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon"><i class="ph-fill ph-syringe"></i></div>
+                        <h3>Aşı & Parazit</h3>
+                        <p>Koruyucu hekimlik kapsamında yıllık aşı takvimi ve aşılama uygulamalarını eksiksiz yapıyoruz.</p>
+                        <a href="hizmetlerimiz.html" class="service-link">Daha Fazla Bilgi <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card fade-up stagger-3">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=800&auto=format&fit=crop" alt="Bakım" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon"><i class="ph-fill ph-scissors"></i></div>
+                        <h3>Kuaför & Bakım</h3>
+                        <p>Profesyonel tıraş, tırnak kesimi ve banyo hizmetlerimizle onları mutlu ve temiz tutuyoruz.</p>
+                        <a href="hizmetlerimiz.html" class="service-link">Daha Fazla Bilgi <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fade-up" style="text-align: center; margin-top: 3rem;">
+                <a href="hizmetlerimiz.html" class="btn btn-secondary btn-large">Tüm Hizmetlerimizi Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider (Müşteri Yorumları) -->
+    <section class="testimonials-section fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mutlu Patiler, Mutlu Aileler</h2>
+                <p>Kliniğimizden sağlıkla ayrılan dostlarımız ve ailelerinin düşünceleri bizim için en değerli motivasyon.</p>
+            </div>
+        </div>
+        
+        <div class="testimonials-ticker">
+            <!-- TRACK 1 -->
+            <div class="testimonials-track">
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Gece yarısı acil olarak köpeğimizi getirdik, hemen müdahale ettiler. Hekim kadrosunun ilgi ve şefkati hakkı ödenmez!"</p>
+                    <div class="client-info">
+                        <strong>Ayşe Y.</strong><span>Mia'nın Annesi</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Kedimin aşı takvimini benim yerime takip edip arıyorlar. Klinikteki ortam ve hijyen gerçekten harika. Framer kalitesinde hizmet dedikleri bu olsa gerek."</p>
+                    <div class="client-info">
+                        <strong>Kerem B.</strong><span>Duman'ın Babası</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Kuşumun tırnak ve gaga bakımı için düzenli geliyorum. Son derece kibar ve sevgi dolu bir ortam. Teşekkürler VetClinic!"</p>
+                    <div class="client-info">
+                        <strong>Zeynep A.</strong><span>Limon'un Sahibi</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Köpeğimiz Pascal'ın diş problemini o kadar nazik çözdüler ki, Pascal kliniğe girerken artık hiç korkmuyor. Çok memnunuz."</p>
+                    <div class="client-info">
+                        <strong>Burak M.</strong><span>Pascal'ın Babası</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TRACK 2 (Cloned for infinite seamless loop) -->
+            <div class="testimonials-track" aria-hidden="true">
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Gece yarısı acil olarak köpeğimizi getirdik, hemen müdahale ettiler. Hekim kadrosunun ilgi ve şefkati hakkı ödenmez!"</p>
+                    <div class="client-info">
+                        <strong>Ayşe Y.</strong><span>Mia'nın Annesi</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Kedimin aşı takvimini benim yerime takip edip arıyorlar. Klinikteki ortam ve hijyen gerçekten harika. Framer kalitesinde hizmet dedikleri bu olsa gerek."</p>
+                    <div class="client-info">
+                        <strong>Kerem B.</strong><span>Duman'ın Babası</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Kuşumun tırnak ve gaga bakımı için düzenli geliyorum. Son derece kibar ve sevgi dolu bir ortam. Teşekkürler VetClinic!"</p>
+                    <div class="client-info">
+                        <strong>Zeynep A.</strong><span>Limon'un Sahibi</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="quote">"Köpeğimiz Pascal'ın diş problemini o kadar nazik çözdüler ki, Pascal kliniğe girerken artık hiç korkmuyor. Çok memnunuz."</p>
+                    <div class="client-info">
+                        <strong>Burak M.</strong><span>Pascal'ın Babası</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homepage Contact & Map Section -->
+    <section class="home-contact-section fade-up" style="padding-bottom: 4rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bize Ulaşın</h2>
+                <p>Acil durumlar ve ziyaretleriniz için her zaman buradayız.</p>
+            </div>
+            
+            <div class="contact-container" style="align-items: stretch;">
+                <div class="contact-info" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="info-items" style="margin-top: 0;">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph-fill ph-map-pin"></i></div>
+                            <div>
+                                <h4>Klinik Adresi</h4>
+                                <p>Örnek Mahallesi, Açelya Cad. Pati Sokak No:12<br>Atakum / Samsun</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph-fill ph-phone-call"></i></div>
+                            <div>
+                                <h4>İletişim Numarası</h4>
+                                <p><strong style="color: var(--primary); font-size: 1.1rem;">0555 123 45 67</strong></p>
+                                <p>info@vetclinic.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ph-fill ph-clock"></i></div>
+                            <div>
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Hafta İçi: 09:00 - 20:00</p>
+                                <p><strong style="color: var(--secondary);">7/24 Acil & Nöbetçi Hekim</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container" style="height: 100%; min-height: 400px; box-shadow: var(--shadow-hover); border-radius: var(--radius-lg); overflow: hidden;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191249.70275825227!2d36.1668832!3d41.2866687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40887717441864bb%3A0xeab5e8ce16a8d67a!2sSamsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand fade-up">
+                <a href="index.html" class="logo"><i class="ph-fill ph-paw-print"></i> VetClinic</a>
+                <p>Minik dostlarınızın sağlığı, bizim önceliğimizdir. Uzman kadro, sevgi dolu bakım.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links fade-up stagger-1">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links fade-up stagger-2">
+                <h4>Ulaşım</h4>
+                <ul>
+                    <li><i class="ph ph-map-pin"></i> Örnek Mah. Pati Sok No:12</li>
+                    <li><i class="ph ph-phone"></i> +90 555 123 45 67</li>
+                    <li><i class="ph ph-envelope"></i> info@vetclinic.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2024 VetClinic. Tüm hakları saklıdır.</p>
+            <p>Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions fade-up">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/905551234567" target="_blank" class="action-btn action-wa" aria-label="WhatsApp'tan Yazın" rel="noopener noreferrer">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+905551234567" class="action-btn action-phone" aria-label="Bizi Arayın">
+            <i class="ph-fill ph-phone-call"></i>
+        </a>
+        <!-- Location -->
+        <a href="https://maps.google.com" target="_blank" class="action-btn action-loc" aria-label="Yol Tarifi Alın" rel="noopener noreferrer">
+            <i class="ph-fill ph-map-pin"></i>
+        </a>
+    </div>
+
+</body>
+</html>

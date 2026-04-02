@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | VetClinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-paw-print"></i>
+                VetClinic
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                <a href="galeri.html">Galeri</a>
+                <a href="hakkimizda.html">Hakkımızda</a>
+                <a href="blog.html">Blog</a>
+                <a href="iletisim.html" class="active">İletişim</a>
+            </nav>
+            <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            <button class="menu-toggle"><i class="ph ph-list"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu"><i class="ph ph-x"></i></button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="blog.html">Blog</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header fade-up">
+        <div class="container">
+            <h1>İletişim</h1>
+            <p>Sizlere yardımcı olmak için buradayız. Minik dostunuzun durumuyla ilgili randevu ya da bilgi almak için formu doldurun veya telefonla ulaşın.</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="contact" style="padding-top: 0;">
+        <div class="container contact-container">
+            <div class="contact-info fade-up">
+                <h3 class="about-headline">Nasıl Yardımcı Olabiliriz?</h3>
+                <p>Anlık bir acil durum söz konusuysa hiç mesaj formunu kullanmadan hemen bizi arayın: <br> <strong><a href="tel:+905551234567" style="color: var(--primary); font-size: 1.2rem; font-weight: 600;">0555 123 45 67</a></strong></p>
+                
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="ph-fill ph-map-pin"></i></div>
+                        <div>
+                            <h4>Klinik Adresimiz</h4>
+                            <p>Örnek Mahallesi, Açelya Cad. Pati Sokak No:12<br>Atakum / Samsun</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="ph-fill ph-phone-call"></i></div>
+                        <div>
+                            <h4>Telefon Numaraları</h4>
+                            <p><a href="tel:+905551234567">+90 (555) 123 45 67</a> <em>(Acil Hat)</em></p>
+                            <p><a href="tel:+902121234567">+90 (212) 123 45 67</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="ph-fill ph-envelope-simple"></i></div>
+                        <div>
+                            <h4>E-Posta</h4>
+                            <p><a href="mailto:info@vetclinic.com">info@vetclinic.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="ph-fill ph-clock"></i></div>
+                        <div>
+                            <h4>Çalışma Saatlerimiz</h4>
+                            <p><strong>Pazartesi - Cumartesi:</strong> 09:00 - 20:00</p>
+                            <p><strong>Pazar:</strong> Sadece Nöbetçi Hekim / Acil (24 Saat)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper fade-up">
+                <h3 style="margin-bottom: 2rem; font-size: 1.6rem; color: var(--primary);">Randevu ve İletişim Formu</h3>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla kliniğimize iletildi. En kısa sürede dönüş yapacağız!');">
+                    <div class="form-group">
+                        <label for="name">İsim Soyisim</label>
+                        <input type="text" id="name" required placeholder="Adınız Soyadınız">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">İletişim Numaranız</label>
+                        <input type="tel" id="phone" required placeholder="05XX XXX XX XX">
+                    </div>
+                    <div class="form-group">
+                        <label for="pet">Evcil Hayvanınızın Türü (İsteğe Bağlı)</label>
+                        <input type="text" id="pet" placeholder="Kedi, Köpek, Kuş vs.">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Konu</label>
+                        <select id="subject" style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%207l5%205%205-5%22%20stroke%3D%22%232B2D42%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2rem;">
+                            <option value="randevu">Muayene / Randevu Talebi</option>
+                            <option value="bilgi">Aşı ve Koruyucu Hekimlik Bilgisi</option>
+                            <option value="diger">Diğer / Soru Sormak İstiyorum</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Şikayet / Mesajınız</label>
+                        <textarea id="message" rows="5" required placeholder="Dostunuzun şikayetinden ya da sormak istediğiniz konudan bahsedebilirsiniz..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" style="font-size: 1.1rem; padding: 1.25rem;">Gönder ve Randevu İste <i class="ph-bold ph-paper-plane-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section fade-up" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kliniğimize Kolay Ulaşım</h2>
+                <p>Acil bir durumda ya da ziyaretinizde size en rahat ulaşımı sağlamak için haritadan yol tarifi alabilirsiniz.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191249.70275825227!2d36.1668832!3d41.2866687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40887717441864bb%3A0xeab5e8ce16a8d67a!2sSamsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="ph-fill ph-paw-print"></i> VetClinic</a>
+                <p>Minik dostlarınızın sağlığı, bizim önceliğimizdir.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Ulaşım</h4>
+                <ul>
+                    <li><i class="ph ph-map-pin"></i> Örnek Mah. Pati Sok No:12</li>
+                    <li><i class="ph ph-phone"></i> +90 555 123 45 67</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2024 VetClinic.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions fade-up">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/905551234567" target="_blank" class="action-btn action-wa" aria-label="WhatsApp'tan Yazın" rel="noopener noreferrer">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+905551234567" class="action-btn action-phone" aria-label="Bizi Arayın">
+            <i class="ph-fill ph-phone-call"></i>
+        </a>
+        <!-- Location -->
+        <a href="https://maps.google.com" target="_blank" class="action-btn action-loc" aria-label="Yol Tarifi Alın" rel="noopener noreferrer">
+            <i class="ph-fill ph-map-pin"></i>
+        </a>
+    </div>
+
+</body>
+</html>
