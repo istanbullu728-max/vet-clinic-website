@@ -739,3 +739,64 @@ section { padding: 6rem 0; }
     .appointment-left { padding: 3rem 1.5rem; }
     .btn-appointment-submit { width: 100%; }
 }
+
+/* --- SERVICES CAROUSEL --- */
+.services-carousel-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem; 
+}
+.services-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0 2rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+}
+.services-track::-webkit-scrollbar {
+    display: none; 
+}
+.carousel-card {
+    flex: 0 0 calc(33.333% - 1.33rem); 
+    scroll-snap-align: start;
+    min-width: 300px;
+}
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px; /* Half of height */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--surface);
+    color: var(--primary);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.carousel-nav-btn:hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+@media (max-width: 992px) {
+    .carousel-card { flex: 0 0 calc(50% - 1rem); }
+    .services-carousel-wrapper { padding: 0 3rem; }
+}
+@media (max-width: 576px) {
+    .services-carousel-wrapper { padding: 0; } 
+    .carousel-nav-btn { display: none; } 
+    .carousel-card { flex: 0 0 85%; }
+}
