@@ -194,6 +194,37 @@ img { max-width: 100%; display: block; border-radius: var(--radius-sm); object-f
 .btn-pill-white:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); text-decoration: none; }
 .btn-pill-white i { color: var(--primary); font-size: 1.4rem; }
 
+/* --- HERO STATS --- */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1;
+}
+.stat-plus { font-size: 2rem; font-weight: 800; color: var(--secondary); margin-left: 2px; }
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+.stat-divider {
+    width: 2px;
+    height: 45px;
+    background-color: var(--border-color);
+}
+
 /* Right Visual Arch Setup */
 .hero-visual-right {
     position: relative;
@@ -606,6 +637,8 @@ section { padding: 6rem 0; }
     .hero-main-desc { font-size: 1rem; line-height: 1.5; margin-bottom: 2rem; padding: 0 1rem; }
     .hero-action-buttons { flex-direction: column; width: 100%; gap: 1rem; }
     .btn-pill-primary, .btn-pill-white { width: 100%; justify-content: center; padding: 1.1rem; border-radius: 50px; }
+    
+    .hero-stats { gap: 1rem; margin-top: 2rem; justify-content: center; transform: scale(0.9); transform-origin: center top; }
     
     .hero-visual-right { height: 280px; align-items: flex-end; justify-content: center; margin-top: 2rem; }
     .arch-image-container { width: 220px; height: 100%; border-radius: 200px 200px 0 0; }
