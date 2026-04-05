@@ -887,17 +887,17 @@ section { padding: 6rem 0; }
 }
 @media (max-width: 576px) {
     .appointment-left { 
-        padding: 2.5rem 1.5rem; border-radius: 20px; text-align: center; 
+        padding: 1.8rem 1.2rem; border-radius: 20px; text-align: center; 
         background: linear-gradient(135deg, var(--primary) 0%, rgba(15, 61, 62, 0.8) 100%) !important;
         box-shadow: 0 15px 35px rgba(15, 61, 62, 0.3);
     }
-    .appointment-form { grid-template-columns: 1fr; gap: 1rem; text-align: left; }
-    .form-submit-wrapper { grid-column: 1 / -1; margin-top: 0.8rem; }
-    .appointment-title { font-size: 1.6rem; line-height: 1.15; margin-bottom: 1rem; padding: 0; }
-    .appointment-subtitle { margin: 0 auto 0.5rem; display: inline-block; font-size: 0.8rem; }
-    .form-group label { font-size: 0.75rem; margin-bottom: 0.3rem; }
-    .form-group input { padding: 0.8rem 1rem; border-radius: 20px; font-size: 0.85rem; }
-    .btn-appointment-submit { width: 100%; padding: 0.9rem; border-radius: 20px; font-size: 1rem; }
+    .appointment-form { grid-template-columns: 1fr; gap: 0.7rem; text-align: left; }
+    .form-submit-wrapper { grid-column: 1 / -1; margin-top: 0.2rem; }
+    .appointment-title { font-size: 1.45rem; line-height: 1.2; margin-bottom: 1rem; padding: 0; }
+    .appointment-subtitle { margin: 0 auto 0.4rem; display: inline-block; font-size: 0.8rem; }
+    .form-group label { font-size: 0.75rem; margin-bottom: 0.25rem; }
+    .form-group input, .form-group select { padding: 0.7rem 1rem; border-radius: 15px; font-size: 0.9rem; height: 44px; border: none; }
+    .btn-appointment-submit { width: 100%; height: 48px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius: 15px; font-size: 1.05rem; }
 }
 
 /* --- SERVICES CAROUSEL --- */
