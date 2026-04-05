@@ -76,23 +76,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'in-view' class to trigger CSS transition
                 entry.target.classList.add('in-view');
-                
-                // Trigger counter animation if element contains counters
                 if (entry.target.classList.contains('hero-stats') || entry.target.querySelector('.counter')) {
                     animateCounters();
                 }
-
-                // Stop observing once animated to avoid re-animating on scroll up (optional)
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Attach observer to all elements
     fadeUpElements.forEach(el => {
         scrollObserver.observe(el);
     });
 
 });
+
+// --- 5. WHATSAPP FORM SUBMISSION GLOBAL ---
+window.sendWhatsApp = function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.querySelector('[name="wa_name"]')?.value || 'Belirtilmedi';
+    const phone = form.querySelector('[name="wa_phone"]')?.value || 'Belirtilmedi';
+    const date = form.querySelector('[name="wa_date"]')?.value || '';
+    const subject = form.querySelector('[name="wa_subject"]')?.value || '';
+    const message = form.querySelector('[name="wa_message"]')?.value || '';
+    
+    let text = `Merhaba VetClinic, randevu/bilgi talebim var:\n\n`;
+    text += `👤 İsim: ${name}\n`;
+    text += `📞 Telefon: ${phone}\n`;
+    if(date) text += `📅 Tercih Edilen Tarih: ${date}\n`;
+    text += `📝 Konu: ${subject}\n`;
+    if(message) text += `💬 Detay/Şikayet: ${message}\n`;
+    
+    const whatsappUrl = `https://wa.me/905551234567?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank');
+};

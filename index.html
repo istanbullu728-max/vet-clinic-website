@@ -262,26 +262,31 @@
                     <span class="appointment-subtitle">Randevu Alın</span>
                     <h2 class="appointment-title">Bugün bir randevu<br>planlayın!</h2>
                     
-                    <form class="appointment-form" action="#" method="GET">
+                    <form class="appointment-form whatsapp-appointment-form" onsubmit="sendWhatsApp(event)">
                         <div class="form-group">
-                            <label>Adınız:</label>
-                            <input type="text" placeholder="Fatih Tulum" required>
+                            <label>İsim Soyisim:</label>
+                            <input type="text" name="wa_name" placeholder="Adınız Soyadınız" required>
                         </div>
                         <div class="form-group">
-                            <label>Telefon Numaranız:</label>
-                            <input type="tel" placeholder="+90 543 210 98 76" required>
+                            <label>İletişim Numaranız:</label>
+                            <input type="tel" name="wa_phone" placeholder="05XX XXX XX XX" required>
                         </div>
                         <div class="form-group">
                             <label>Tarih Seçin:</label>
-                            <input type="date" required>
+                            <input type="date" name="wa_date" required>
                         </div>
                         <div class="form-group">
-                            <label>Mail Adresiniz:</label>
-                            <input type="email" placeholder="info@istvetklinik.com" required>
+                            <label>Sebebiniz:</label>
+                            <select name="wa_subject" required style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%207l5%205%205-5%22%20stroke%3D%22%232B2D42%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2rem; cursor: pointer;">
+                                <option value="Muayene / Randevu">Muayene / Randevu</option>
+                                <option value="Aşı Takvimi">Aşı & Parazit</option>
+                                <option value="Kuaför ve Bakım">Kuaför / Bakım</option>
+                                <option value="Genel Sorular">Diğer Konular</option>
+                            </select>
                         </div>
                         
                         <div class="form-submit-wrapper">
-                            <button type="submit" class="btn-appointment-submit">Gönder</button>
+                            <button type="submit" class="btn-appointment-submit">Gönder <i class="ph-bold ph-whatsapp-logo"></i></button>
                         </div>
                     </form>
                 </div>
