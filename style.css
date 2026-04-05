@@ -639,7 +639,7 @@ section { padding: 6rem 0; }
     .navbar { padding: 1rem 0; }
     
     .composite-hero { 
-        padding: 6.5rem 1rem 4rem; 
+        padding: 5.2rem 1rem 3.2rem; 
         min-height: auto; 
         background: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.92) 100%), url('images/cute_vet_puppy.png') no-repeat center top / cover !important; 
     }
@@ -649,15 +649,15 @@ section { padding: 6rem 0; }
     .hero-display-title br { display: none; }
     .hero-main-desc { font-size: 0.95rem; line-height: 1.5; margin-bottom: 2.5rem; color: rgba(255,255,255,0.9) !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
     
-    .hero-action-buttons { display: flex; flex-direction: column; width: 100%; gap: 1rem; }
-    .btn-pill-primary, .btn-pill-white { width: 100%; justify-content: center; padding: 1.2rem; border-radius: 50px; font-size: 1.1rem; }
+    .hero-action-buttons { display: flex; flex-direction: column; width: 100%; align-items: center; gap: 1rem; }
+    .btn-pill-primary, .btn-pill-white { width: 80%; max-width: 320px; justify-content: center; padding: 1.15rem; border-radius: 50px; font-size: 1.05rem; letter-spacing: 0.5px; }
     .hide-on-mobile { display: none !important; }
-    .show-on-mobile { display: flex !important; margin-top: 0.5rem; }
+    .show-on-mobile { display: flex !important; margin-top: 0; }
     
     /* Inline Mobile Stats built directly into dark overlay */
     .mobile-only-stats-inline { 
         display: flex !important; width: 100%; justify-content: space-between; 
-        margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15);
+        margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.15);
         gap: 0.5rem;
     }
     .inline-stat { display: flex; flex-direction: column; align-items: center; flex: 1; }
