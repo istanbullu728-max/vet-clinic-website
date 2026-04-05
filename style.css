@@ -642,10 +642,10 @@ section { padding: 6rem 0; }
         background: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.92) 100%), url('images/cute_vet_puppy.png') no-repeat center top / cover !important; 
     }
     .composite-hero::before, .composite-hero::after { display: none; }
-    .hero-content-left { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; }
-    .hero-display-title { font-size: 2.3rem; line-height: 1.15; margin-bottom: 0.8rem; color: #ffffff !important; }
+    .hero-content-left { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; justify-content: center; min-height: 50vh; }
+    .hero-display-title { font-size: 2.3rem; line-height: 1.15; margin-bottom: 2rem; color: #ffffff !important; }
     .hero-display-title br { display: none; }
-    .hero-main-desc { font-size: 1.05rem; line-height: 1.5; margin-bottom: 2.5rem; color: rgba(255,255,255,0.95) !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+    .hero-main-desc { display: none !important; } /* Extreme minimalism on mobile */
     
     .hero-action-buttons { display: flex; flex-direction: column; width: 100%; gap: 1rem; }
     .btn-pill-primary, .btn-pill-white { width: 100%; justify-content: center; padding: 1.2rem; border-radius: 50px; font-size: 1.1rem; }
@@ -872,12 +872,12 @@ section { padding: 6rem 0; }
 }
 @media (max-width: 576px) {
     .appointment-left { 
-        padding: 2rem 1.5rem; border-radius: 20px; text-align: center; 
+        padding: 2.5rem 1.5rem; border-radius: 20px; text-align: center; 
         background: linear-gradient(135deg, var(--primary) 0%, rgba(15, 61, 62, 0.8) 100%) !important;
         box-shadow: 0 15px 35px rgba(15, 61, 62, 0.3);
     }
-    .appointment-form { grid-template-columns: 1fr 1fr; gap: 0.6rem; row-gap: 1rem; text-align: left; }
-    .form-submit-wrapper { grid-column: span 2; margin-top: 0.5rem; }
+    .appointment-form { grid-template-columns: 1fr; gap: 1rem; text-align: left; }
+    .form-submit-wrapper { grid-column: 1 / -1; margin-top: 0.8rem; }
     .appointment-title { font-size: 1.6rem; line-height: 1.15; margin-bottom: 1rem; padding: 0; }
     .appointment-subtitle { margin: 0 auto 0.5rem; display: inline-block; font-size: 0.8rem; }
     .form-group label { font-size: 0.75rem; margin-bottom: 0.3rem; }
