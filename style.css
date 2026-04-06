@@ -780,6 +780,12 @@ section { padding: 6rem 0; }
     .action-btn { width: 55px; height: 55px; font-size: 1.6rem; box-shadow: 0 8px 25px rgba(0,0,0,0.18); }
     .action-btn::after { display: none; }
     .action-loc { display: none !important; }
+    
+    /* Homepage Layout Reordering (Mobile Only) */
+    body { display: flex; flex-direction: column; }
+    .home-contact-section { order: 1; }
+    .quick-appointment { order: 2; margin-bottom: 0; padding-bottom: 3rem; }
+    .footer { order: 3; }
 }
 
 /* --- QUICK APPOINTMENT SECTION --- */
