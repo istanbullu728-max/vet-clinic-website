@@ -666,7 +666,7 @@ section { padding: 6rem 0; }
         font-weight: 600; 
         box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4) !important; 
     }
-    .btn-pill-primary, .btn-pill-white { width: auto; max-width: max-content; justify-content: center; padding: 1rem 1.8rem; border-radius: 50px; font-size: 0.95rem; letter-spacing: 0.5px; }
+    .btn-pill-primary, .btn-pill-white { width: max-content; min-width: 180px; justify-content: center; padding: 1.15rem 2.2rem; border-radius: 50px; font-size: 0.95rem; letter-spacing: 0.5px; }
     .hide-on-mobile { display: none !important; }
     .show-on-mobile { display: flex !important; margin-top: 0; }
     .show-inline-on-mobile { display: inline !important; }
