@@ -757,6 +757,7 @@ section { padding: 6rem 0; }
     }
     .action-btn { width: 55px; height: 55px; font-size: 1.6rem; box-shadow: 0 8px 25px rgba(0,0,0,0.18); }
     .action-btn::after { display: none; }
+    .action-loc { display: none !important; }
 }
 
 /* --- QUICK APPOINTMENT SECTION --- */
