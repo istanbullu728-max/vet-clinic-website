@@ -57,7 +57,9 @@
     <!-- Services Section -->
     <section class="services" style="padding-top: 2rem;">
         <div class="container">
-            <div class="services-grid">
+            <!-- Desktop View -->
+            <div class="desktop-services-view">
+                <div class="services-grid">
                 
                 <!-- Service Card 1 -->
                 <div class="service-card fade-up">
@@ -118,7 +120,79 @@
                         <p>Irk özelliklerine uygun makas tıraşı, makine tıraşı, ilaçlı banyo, göz ve tırnak temizliği ile dostlarınızı şımartıyoruz.</p>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Mobile View (Slider) -->
+            <div class="mobile-services-view">
+                <div class="services-carousel-wrapper fade-up">
+                    <button class="carousel-nav-btn prev-btn" id="servicesPrev"><i class="ph-bold ph-caret-left"></i></button>
+                    
+                    <div class="services-track" id="servicesTrack">
+                        
+                        <!-- Service Card 1 -->
+                        <div class="service-card carousel-card">
+                            <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=800&auto=format&fit=crop" alt="Muayene" class="service-image">
+                            <div class="service-content">
+                                <div class="service-icon"><i class="ph-fill ph-stethoscope"></i></div>
+                                <h3>Genel Muayene & Check-Up</h3>
+                                <p>Dostlarımızın yaş, ırk ve sağlık geçmişine özel periyodik taramalar. Erken teşhis hayat kurtarır prensibiyle detaylı fiziksel muayeneler gerçekleştiriyoruz.</p>
+                            </div>
+                        </div>
 
+                        <!-- Service Card 2 -->
+                        <div class="service-card carousel-card">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop" alt="Aşı" class="service-image">
+                            <div class="service-content">
+                                <div class="service-icon"><i class="ph-fill ph-syringe"></i></div>
+                                <h3>Aşı ve Parazit Uygulamaları</h3>
+                                <p>İç ve dış parazit takibi, yasal zorunlu aşılar ve yıllık aşı takvimini kliniğimiz sizin adınıza takip eder, günü geldiğinde size SMS ile bildirir.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 3 -->
+                        <div class="service-card carousel-card">
+                            <img src="https://images.unsplash.com/photo-1629851703666-8acb6fb3dc96?q=80&w=800&auto=format&fit=crop" alt="Laboratuvar" class="service-image">
+                            <div class="service-content">
+                                <div class="service-icon"><i class="ph-fill ph-microscope"></i></div>
+                                <h3>Laboratuvar ve Görüntüleme</h3>
+                                <p>Tam kan sayımı, detaylı biyokimya analizleri, dijital röntgen ve ultrasonografi ünitelerimiz ile tam donanımlı laboratuvar hizmeti.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 4 -->
+                        <div class="service-card carousel-card">
+                            <img src="https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?q=80&w=800&auto=format&fit=crop" alt="Cerrahi" class="service-image">
+                            <div class="service-content">
+                                <div class="service-icon"><i class="ph-fill ph-heartbeat"></i></div>
+                                <h3>Cerrahi Müdahaleler</h3>
+                                <p>Tam donanımlı ve steril ameliyathanemizde; kapalı devre gaz anestezisi ile doku, yumuşak doku ve ortopedik operasyonları güvenle gerçekleştiriyoruz.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 5 -->
+                        <div class="service-card carousel-card">
+                            <img src="https://images.unsplash.com/photo-1527526029430-319f10814151?q=80&w=800&auto=format&fit=crop" alt="Diş" class="service-image">
+                            <div class="service-content">
+                                <div class="service-icon"><i class="ph-fill ph-tooth"></i></div>
+                                <h3>Ağız ve Diş Sağlığı</h3>
+                                <p>Kavitron ile detaylı tartar temizliği, kırık diş tedavisi ve diğer periodontal sorunların çözümü için modern yaklaşımlar.</p>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 6 -->
+                        <div class="service-card carousel-card">
+                            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=800&auto=format&fit=crop" alt="Kuaför" class="service-image">
+                            <div class="service-content">
+                                <div class="service-icon"><i class="ph-fill ph-scissors"></i></div>
+                                <h3>Özel Kuaför ve Pet Bakım</h3>
+                                <p>Irk özelliklerine uygun makas tıraşı, makine tıraşı, ilaçlı banyo, göz ve tırnak temizliği ile dostlarınızı şımartıyoruz.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <button class="carousel-nav-btn next-btn" id="servicesNext"><i class="ph-bold ph-caret-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
@@ -177,5 +251,66 @@
         </a>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById("servicesTrack");
+            const prevBtn = document.getElementById("servicesPrev");
+            const nextBtn = document.getElementById("servicesNext");
+            
+            if(!track) return;
+            
+            let autoScrollTimer;
+
+            const getCardWidth = () => {
+                const card = track.querySelector(".carousel-card");
+                if(!card) return 300;
+                return card.offsetWidth + 32; 
+            };
+
+            const scrollNext = () => {
+                if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+                    track.scrollBy({ left: -track.scrollWidth, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+                }
+            };
+
+            const scrollPrev = () => {
+                if (track.scrollLeft <= 5) {
+                    track.scrollBy({ left: track.scrollWidth, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+                }
+            };
+            
+            const startAutoScroll = () => {
+                autoScrollTimer = setInterval(scrollNext, 3000);
+            };
+            
+            const resetAutoScroll = () => {
+                clearInterval(autoScrollTimer);
+                startAutoScroll();
+            };
+
+            if(nextBtn) {
+                nextBtn.addEventListener("click", () => {
+                    scrollNext();
+                    resetAutoScroll();
+                });
+            }
+
+            if(prevBtn) {
+                prevBtn.addEventListener("click", () => {
+                    scrollPrev();
+                    resetAutoScroll();
+                });
+            }
+
+            track.addEventListener("mouseenter", () => clearInterval(autoScrollTimer));
+            track.addEventListener("mouseleave", startAutoScroll);
+            
+            startAutoScroll();
+        });
+    </script>
 </body>
 </html>
