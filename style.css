@@ -802,9 +802,9 @@ section { padding: 6rem 0; }
 }
 .appointment-left {
     position: relative;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    background-color: var(--primary-light);
     padding: 6rem 5rem 6rem 8vw;
-    color: #ffffff;
+    color: var(--primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
