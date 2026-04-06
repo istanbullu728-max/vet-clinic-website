@@ -624,6 +624,10 @@ section { padding: 6rem 0; }
 .show-on-mobile { display: none !important; }
 .show-inline-on-mobile { display: none !important; }
 
+/* Services Views Toggle */
+.mobile-services-view { display: none; }
+.desktop-services-view { display: block; }
+
 
 @media (max-width: 1024px) {
     .about-container, .contact-container { grid-template-columns: 1fr; gap: 3rem; }
@@ -635,6 +639,9 @@ section { padding: 6rem 0; }
 @media (max-width: 768px) {
     :root { --container-padding: 1.25rem; }
     body { font-size: 15px; }
+
+    .mobile-services-view { display: block !important; }
+    .desktop-services-view { display: none !important; }
 
     .nav-links, .navbar .btn-primary { display: none; }
     .menu-toggle { display: block; }
