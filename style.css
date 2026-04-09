@@ -216,6 +216,9 @@ img { max-width: 100%; display: block; border-radius: var(--radius-sm); object-f
     font-family: var(--font-heading);
     color: var(--primary);
     line-height: 1;
+    display: inline-block;
+    min-width: 1.2ch; /* Reserves space for digits */
+    text-align: left;
 }
 .stat-plus { font-size: 2rem; font-weight: 800; color: var(--secondary); margin-left: 2px; }
 .stat-label {
@@ -687,8 +690,12 @@ section { padding: 6rem 0; }
         background: transparent; border: none; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none;
     }
     .inline-stat { display: flex; flex-direction: column; align-items: center; flex: 1; }
-    .inline-num { font-size: 1.95rem; font-weight: 800; color: #fff; line-height: 1; font-family: var(--font-heading); text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-    .inline-num-sub { font-size: 1.1rem; color: var(--secondary); font-weight: 700; margin-left: 2px; }
+    .inline-num { 
+        font-size: 1.95rem; font-weight: 800; color: #fff; line-height: 1; 
+        font-family: var(--font-heading); text-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+        display: inline-block; min-width: 1.2ch; text-align: left; 
+    }
+    .inline-num-sub { font-size: 1.1rem; color: var(--secondary); font-weight: 700; margin-left: 2px; vertical-align: baseline; }
     .inline-text { font-size: 0.72rem; color: rgba(255,255,255,0.85); margin-top: 0.6rem; text-align: center; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; }
     
     .hero-stats { display: none !important; }

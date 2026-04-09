@@ -52,34 +52,35 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- 4. COUNTER STATS ANIMATION ---
-    function animateCounters() {
-        const counters = document.querySelectorAll('.counter');
-        const speed = 60; // Lower is faster
+    function animateCounter(counter) {
+        if (counter.dataset.animated === "true") return;
+        counter.dataset.animated = "true";
         
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const inc = target / speed;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(updateCount, 30);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            updateCount();
-        });
+        const target = +counter.getAttribute('data-target');
+        const speed = 60; // Lower is faster
+        const inc = target / speed;
+        
+        const updateCount = () => {
+            const count = +counter.innerText;
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 30);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
     }
 
     const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
-                if (entry.target.classList.contains('hero-stats') || entry.target.querySelector('.counter')) {
-                    animateCounters();
-                }
+                
+                // Find all counters inside the animated section
+                const counters = entry.target.querySelectorAll('.counter');
+                counters.forEach(counter => animateCounter(counter));
+                
                 observer.unobserve(entry.target);
             }
         });
