@@ -50,7 +50,7 @@
     <header class="page-header fade-up">
         <div class="container">
             <h1>İletişim</h1>
-            <p>Sizlere yardımcı olmak için buradayız. Minik dostunuzun durumuyla ilgili randevu ya da bilgi almak için formu doldurun veya telefonla ulaşın.</p>
+            <p>Sizlere yardımcı olmak için buradayız. Randevu talepleriniz veya sorularınız için aşağıdaki formu kullanabilir ya da bize doğrudan ulaşabilirsiniz.</p>
         </div>
     </header>
 
@@ -58,74 +58,77 @@
     <section class="contact" style="padding-top: 0;">
         <div class="container contact-container">
             <div class="contact-info fade-up">
-                <h3 class="about-headline">Nasıl Yardımcı Olabiliriz?</h3>
-                <p>Anlık bir acil durum söz konusuysa hiç mesaj formunu kullanmadan hemen bizi arayın: <br> <strong><a href="tel:+905551234567" style="color: var(--primary); font-size: 1.2rem; font-weight: 600;">0555 123 45 67</a></strong></p>
+                <h3 class="about-headline">Size Nasıl Yardımcı Olabiliriz?</h3>
+                <p>Acil bir durum söz konusuysa hiç vakit kaybetmeden bizi arayın: <br> <strong><a href="tel:+905551234567" style="color: var(--primary); font-size: 1.4rem; font-weight: 700;">0555 123 45 67</a></strong></p>
                 
                 <div class="info-items">
                     <div class="info-item">
-                        <div class="info-icon"><i class="ph-fill ph-map-pin"></i></div>
+                        <div class="info-icon"><i class="ph-bold ph-map-pin"></i></div>
                         <div>
                             <h4>Klinik Adresimiz</h4>
-                            <p>Örnek Mahallesi, Açelya Cad. Pati Sokak No:12<br>Atakum / Samsun</p>
+                            <p>Örnek Mahallesi, Açelya Cad. No:12<br>Atakum / Samsun</p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon"><i class="ph-fill ph-phone-call"></i></div>
+                        <div class="info-icon"><i class="ph-bold ph-phone-call"></i></div>
                         <div>
                             <h4>Telefon Numaraları</h4>
-                            <p><a href="tel:+905551234567">+90 (555) 123 45 67</a> <em>(Acil Hat)</em></p>
+                            <p><a href="tel:+905551234567">+90 (555) 123 45 67</a></p>
                             <p><a href="tel:+902121234567">+90 (212) 123 45 67</a></p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon"><i class="ph-fill ph-envelope-simple"></i></div>
+                        <div class="info-icon"><i class="ph-bold ph-envelope-simple"></i></div>
                         <div>
                             <h4>E-Posta</h4>
                             <p><a href="mailto:info@vetclinic.com">info@vetclinic.com</a></p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-icon"><i class="ph-fill ph-clock"></i></div>
+                        <div class="info-icon"><i class="ph-bold ph-clock"></i></div>
                         <div>
                             <h4>Çalışma Saatlerimiz</h4>
-                            <p><strong>Pazartesi - Cumartesi:</strong> 09:00 - 20:00</p>
-                            <p><strong>Pazar:</strong> Sadece Nöbetçi Hekim / Acil (24 Saat)</p>
+                            <p><strong>Pzt - Cmt:</strong> 09:00 - 20:00</p>
+                            <p><strong>Pazar:</strong> Sadece Acil (24 Saat)</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="contact-form-wrapper fade-up">
-                <h3 style="margin-bottom: 2rem; font-size: 1.6rem; color: var(--primary);">Randevu ve İletişim Formu</h3>
+                <h3>Randevu Talebi Oluşturun</h3>
                 <form class="appointment-form whatsapp-appointment-form" onsubmit="sendWhatsApp(event)">
                     <div class="form-group">
-                        <label>İsim Soyisim:</label>
-                        <input type="text" name="wa_name" placeholder="Adınız Soyadınız" required>
+                        <label>Adınız Soyadınız</label>
+                        <input type="text" name="wa_name" placeholder="Örn: Ahmet Yılmaz" required>
                     </div>
                     <div class="form-group">
-                        <label>İletişim Numaranız:</label>
+                        <label>Telefon Numaranız</label>
                         <input type="tel" name="wa_phone" placeholder="05XX XXX XX XX" required>
                     </div>
                     <div class="form-group">
-                        <label>Tarih Seçin (İsteğe Bağlı):</label>
+                        <label>Randevu Tarihi</label>
                         <input type="date" name="wa_date">
                     </div>
                     <div class="form-group">
-                        <label>Sebebiniz:</label>
-                        <select name="wa_subject" required style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%207l5%205%205-5%22%20stroke%3D%22%232B2D42%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2rem; cursor: pointer;">
-                            <option value="Muayene / Randevu">Muayene / Randevu Talebi</option>
+                        <label>Hizmet Seçiniz</label>
+                        <select name="wa_subject" required>
+                            <option value="" disabled selected>Hizmet Seçin</option>
+                            <option value="Muayene / Randevu">Muayene / Randevu</option>
                             <option value="Aşı Takvimi">Aşı & Parazit</option>
                             <option value="Kuaför ve Bakım">Kuaför / Bakım</option>
-                            <option value="Genel Sorular">Diğer / Soru Sormak İstiyorum</option>
+                            <option value="Diğer">Diğer Sorular</option>
                         </select>
                     </div>
                     <div class="form-group" style="grid-column: 1 / -1;">
-                        <label>Şikayet / Mesajınız (İsteğe Bağlı):</label>
-                        <textarea name="wa_message" rows="3" placeholder="Dostunuzun şikayetinden ya da sormak istediğiniz konudan bahsedebilirsiniz..."></textarea>
+                        <label>Notunuz (İsteğe Bağlı)</label>
+                        <textarea name="wa_message" rows="3" placeholder="Dostunuzun şikayetinden ya da merak ettiğiniz konudan kısaca bahsedebilirsiniz..."></textarea>
                     </div>
                     
-                    <div class="form-submit-wrapper" style="grid-column: 1 / -1; margin-top: 0;">
-                        <button type="submit" class="btn btn-primary btn-full" style="width: 100%; font-size: 1.1rem; padding: 1.25rem;">Gönder ve Randevu İste <i class="ph-bold ph-whatsapp-logo"></i></button>
+                    <div class="form-submit-wrapper" style="grid-column: 1 / -1;">
+                        <button type="submit" class="btn btn-primary btn-full" style="width: 100%; border-radius: 16px;">
+                            WhatsApp ile Randevu Al <i class="ph-bold ph-whatsapp-logo"></i>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -136,11 +139,11 @@
     <section class="map-section fade-up" style="padding-top: 0;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Kliniğimize Kolay Ulaşım</h2>
-                <p>Acil bir durumda ya da ziyaretinizde size en rahat ulaşımı sağlamak için haritadan yol tarifi alabilirsiniz.</p>
+                <h2 class="section-title">Konumumuz</h2>
+                <p>Şehrin merkezinde, kolay ulaşılabilir konumumuzla hizmetinizdeyiz.</p>
             </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191249.70275825227!2d36.1668832!3d41.2866687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40887717441864bb%3A0xeab5e8ce16a8d67a!2sSamsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-container" style="border: 2px solid var(--border-color);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191249.70275825227!2d36.1668832!3d41.2866687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40887717441864bb%3A0xeab5e8ce16a8d67a!2sSamsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
